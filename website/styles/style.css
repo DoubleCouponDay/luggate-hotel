@@ -1,0 +1,180 @@
+
+:root {
+    --font-colour: rgb(22, 11, 8);
+    --content-box-colour: rgb(241, 220, 191);
+    --background-colour: rgb(22, 11, 8);
+    --desktop-width: 1000px;
+    --default-shadow: 10px 5px 5px var(--background-colour);
+    --flexbox-margin: 5px;
+}
+
+html {
+    scroll-behavior: smooth;        
+}  
+
+@font-face {
+    font-family: font1;
+    src: url("../assets/Copperplate Gothic Bold Regular.woff");
+}
+
+@font-face
+{
+    font-family: font2;
+    src: url("../assets/Copperplate Light.ttf");
+}
+
+body {
+    background-color: var(--background-colour);
+    font-family: font1;
+    color: var(--font-colour);
+}
+
+@media screen and (max-width: 1000px)
+{
+    html
+    {
+        zoom: 35%;
+    }
+}
+
+.home-button
+{
+    width: 30px;
+    height: 30px;
+    color: var(--content-box-colour);
+    vertical-align: middle;
+}
+
+.top-image {
+    display:block;
+    height:602px;
+    margin-left: auto;
+    margin-right: auto;
+    width: var(--desktop-width);
+    z-index: -1;
+    border-left: 2px solid var(--content-box-colour);
+    border-right: 2px solid var(--content-box-colour);
+}
+
+.flourish-image {
+    height: 600px;
+    width: 1353px;
+    position:absolute;
+    left: -186px;
+}
+
+.flourish-container {
+    width: var(--desktop-width);
+    margin-left: auto;
+    margin-right: auto;
+    height:auto;
+    position:relative;
+}
+
+.nav-container
+{
+    position:relative;
+    top:-50px;
+    margin-left:auto;
+    margin-right:auto;      
+    width: calc(10px + var(--desktop-width));
+    justify-content: center;    
+}
+
+.nav-button
+{
+    --nav-button-padding: 20px;
+    box-sizing: border-box;
+    border: 5px ridge var(--content-box-colour);
+    background-color: var(--background-colour);
+    box-shadow: var(--default-shadow);
+    margin-left: var(--flexbox-margin);
+    margin-right: var(--flexbox-margin);
+    padding-left: var(--nav-button-padding);
+    padding-right: var(--nav-button-padding);
+    line-height: 1;
+    font-size: 40px;
+    display:inline-block;
+
+    /* these two need to be in a class, instead of in an <a> because IOS turns phone numbers into <a> elements. 
+        Otherwise the phone number will have the same colour as the background. (invisible) */
+    text-decoration: none; 
+    color: var(--content-box-colour);   
+}
+
+.centered-content
+{
+    text-align: center;
+}
+
+.description-container {      
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    width:1000px;
+    height: 1460px;
+    top: -30px;
+}
+
+.description-item
+{
+    margin: 20px;     
+    background-color: var(--content-box-colour);
+    height: auto;
+    position: absolute;
+    font-size: 25px;
+    z-index: 1;
+    font-family: font2;
+    font-weight: bold; 
+    width: 900px;
+}
+
+.description-image
+{
+    width: 500px;
+    height: auto;
+    position:absolute;      
+    z-index: 1;
+    box-shadow: var(--default-shadow);
+    bottom: 200px;
+    margin: auto;
+    right: 0px;
+    left: 0px;
+}
+
+.description-1 {    
+    left: 30px;
+    top: 200px;
+}
+
+.non-embossed-link
+{
+    text-decoration: underline;
+}
+
+.paragraph-graphic
+{
+    margin-left: auto;
+    margin-right: auto;
+    width: 1000px;
+}
+
+.footer-container {
+    display:flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: var(--desktop-width);
+    margin-left: auto;
+    margin-right:auto;      
+    height: 40px;
+}
+
+.footer-item
+{      
+    color: var(--content-box-colour);   
+    font-size: 15px;
+    padding-right: var(--flexbox-margin);
+    padding-left: var(--flexbox-margin);
+    color: var(--content-box-colour);  
+    margin-top: 0px;
+}    
